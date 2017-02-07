@@ -22,10 +22,6 @@ public class InitialActivity extends AppCompatActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.initial_activity);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         listViewInitial = (ListView) findViewById(R.id.main_listview);
 
         String[] values = new String[]{
@@ -41,7 +37,8 @@ public class InitialActivity extends AppCompatActivity{
 
                 switch (position){
                     case 0:
-
+                        Intent lifecycleActivity = new Intent(getApplicationContext(), LifecycleActivity.class);
+                        startActivity(lifecycleActivity);
                         break;
                     case 1:
                         Intent recyclerViewActivity = new Intent(getApplicationContext(), RecyclerViewActivity.class);

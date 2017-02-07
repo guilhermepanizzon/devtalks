@@ -23,7 +23,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
     DevTalksAdapter devTalksAdapter;
     List<DevTalks> devTalksList;
     RecyclerView.LayoutManager mLayoutManager;
-    FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +32,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         initCollapsingToolbar();
         populateAdapter();
+
         devTalksRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_devtalks);
         devTalksAdapter = new DevTalksAdapter(this, devTalksList);
 

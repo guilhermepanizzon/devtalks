@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DevTalksRecyclerView.iml" filepath="$PROJECT_DIR$/DevTalksRecyclerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/devtalks.iml" filepath="$PROJECT_DIR$/devtalks.iml" />
     </modules>
   </component>
 </project>
