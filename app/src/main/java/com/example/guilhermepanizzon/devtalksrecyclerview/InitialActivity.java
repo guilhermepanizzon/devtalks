@@ -3,6 +3,7 @@ package com.example.guilhermepanizzon.devtalksrecyclerview;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -16,8 +17,9 @@ import java.util.List;
  * Created by guilhermepanizzon on 06/02/17.
  */
 
-public class InitialActivity extends AppCompatActivity{
+public class InitialActivity extends AppCompatActivity {
     ListView listViewInitial;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,7 @@ public class InitialActivity extends AppCompatActivity{
         listViewInitial = (ListView) findViewById(R.id.main_listview);
 
         String[] values = new String[]{
-          "Activity Lifecycle", "RecyclerView"
+                "Activity Lifecycle", "CardView + RecyclerView"
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -35,7 +37,7 @@ public class InitialActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                switch (position){
+                switch (position) {
                     case 0:
                         Intent lifecycleActivity = new Intent(getApplicationContext(), LifecycleActivity.class);
                         startActivity(lifecycleActivity);
@@ -45,11 +47,10 @@ public class InitialActivity extends AppCompatActivity{
                         startActivity(recyclerViewActivity);
                         break;
                 }
-
             }
         });
 
-
     }
+
 
 }
